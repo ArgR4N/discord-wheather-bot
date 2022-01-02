@@ -1,8 +1,6 @@
 'use strict';
 
-/**
- * A ping pong bot, whenever you send "ping", it replies "pong".
- */
+
 
 // Import the discord.js module
 const axios = require('axios')
@@ -16,10 +14,7 @@ const client = new Client();
 
 
 
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
+
 client.on('ready', () => {
   console.log('I am ready!');
   fetchFunction()
@@ -31,7 +26,7 @@ let readyMessage;
 const setMessage = message =>{
 
 
-    //si el mensaje existe...
+    //it the message exists...
     if (message.content.length > 1) {
         mainMessage = message
         readyMessage = message.content.split(" " || "-" )
